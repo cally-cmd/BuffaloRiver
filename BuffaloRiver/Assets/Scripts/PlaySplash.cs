@@ -21,5 +21,7 @@ public class PlaySplash : MonoBehaviour
 
     public void Click(){
         audio.Play();
+        GameManager.Instance.riverEcon++;
+        print(GameManager.Instance.riverEcon);
     }
 }
