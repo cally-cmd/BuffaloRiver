@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: 97c24560ef1e3e94b86c9cdf27d4ac8d
+  - enabled: 1
+    path: Assets/Scenes/Example event.unity
+    guid: 108129840eb51444b84085c77344ccd2
   m_configObjects: {}
