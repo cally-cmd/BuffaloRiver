@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class textDisplay : MonoBehaviour
+public class levelManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI calendarYear;
@@ -25,5 +25,13 @@ public class textDisplay : MonoBehaviour
         GameManager.Instance.actualTime = 1972 + (GameManager.Instance.timer / GameManager.Instance.timePassing);
         scoreText.text = GameManager.Instance.riverEcon.ToString();
         calendarYear.text = GameManager.Instance.actualTime.ToString();
+    }
+
+    public void levelPause(){
+        GameManager.Instance.pause();
+    }
+
+    public void levelUnpause(){
+        GameManager.Instance.unpause();
     }
 }

@@ -1651,7 +1651,7 @@ GameObject:
   - component: {fileID: 1004072399}
   - component: {fileID: 1004072398}
   m_Layer: 0
-  m_Name: textDisplayObject
+  m_Name: levelManagerObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1782,9 +1782,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1750293947}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: unpause
+      - m_Target: {fileID: 1004072398}
+        m_TargetAssemblyTypeName: levelManager, Assembly-CSharp
+        m_MethodName: levelUnpause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1928,9 +1928,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1750293947}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: pause
+      - m_Target: {fileID: 1004072398}
+        m_TargetAssemblyTypeName: levelManager, Assembly-CSharp
+        m_MethodName: levelPause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
