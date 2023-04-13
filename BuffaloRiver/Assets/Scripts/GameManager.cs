@@ -41,12 +41,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!paused){
-            timer++;
-        }
-        actualTime = 1972 + (timer / timePassing);
-        scoreText.text = riverEcon.ToString();
-        calendarYear.text = actualTime.ToString();
         if ((actualTime > 2023) && (riverEcon < 50)){
             SceneManager.LoadScene("Game Over");
             riverEcon = 0;
