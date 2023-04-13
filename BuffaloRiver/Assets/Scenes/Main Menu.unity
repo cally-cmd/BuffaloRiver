@@ -429,7 +429,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Credits
+          m_StringArgument: Credits (Menu)
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1896800942}
@@ -957,6 +957,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1949871110}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: unpause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1641628395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1356,6 +1368,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f966cec0108ea4f4c879d18632472a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  riverEcon: 0
+  timer: 0
+  actualTime: 0
+  ecosystemHealth: 0
+  riverBeauty: 0
+  scoreText: {fileID: 0}
+  calendarYear: {fileID: 0}
+  paused: 0
+  timePassing: 0
 --- !u!4 &1949871111
 Transform:
   m_ObjectHideFlags: 0
