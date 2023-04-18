@@ -24,6 +24,11 @@ public class PlaySplash : MonoBehaviour
             audio.Play();
             GameManager.Instance.riverEcon++;
             print(GameManager.Instance.riverEcon);
+            DelaySplash();
         }
+    }
+
+    public IEnumerator DelaySplash() {
+        yield return new WaitForSeconds(0.5f);
     }
 }
