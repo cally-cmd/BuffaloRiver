@@ -9,7 +9,7 @@ public class Fish : MonoBehaviour
     private float y;
     private float frequency;
     public GameObject fish1;
-    public GameObject fish2;
+    //public GameObject fish2;
     private bool jumping;
     private float amplitude;
     void Start()
