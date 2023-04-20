@@ -14,10 +14,17 @@ public class GameManager : MonoBehaviour
     public int actualTime;
     public int ecosystemHealth;
     public int riverBeauty;
+    public int score;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI calendarYear;
     public bool paused;
     public int timePassing;
+
+    //shop
+    public float currentScore;
+    public int item1Price;
+    
+
 
     void Awake() {
        if (Instance == null) {
@@ -61,6 +68,27 @@ public class GameManager : MonoBehaviour
             timePassing = 2000;
             paused = true;
         }
+    }
+
+    public void item1()
+    {
+        //if(currentScore >= item1Price){
+            //currentScore -= item1Price;
+            //amount += 5;
+            //profit += 5;
+        //}
+
+
+    }
+
+    public void item2()
+    {
+        //if(currentScore >= item2Price){
+            //currentScore -= item2Price;
+            //amount += 2;
+            //profit += 2;
+        //}
+
     }
 
     public void pause(){
