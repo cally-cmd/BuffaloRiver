@@ -2069,10 +2069,13 @@ MonoBehaviour:
   actualTime: 0
   ecosystemHealth: 0
   riverBeauty: 0
+  score: 0
   scoreText: {fileID: 2045435865}
   calendarYear: {fileID: 747111449}
   paused: 0
   timePassing: 0
+  currentScore: 0
+  item1Price: 0
 --- !u!4 &1750293948
 Transform:
   m_ObjectHideFlags: 0
@@ -2325,7 +2328,7 @@ GameObject:
   - component: {fileID: 1781962138}
   - component: {fileID: 1781962137}
   m_Layer: 5
-  m_Name: Button
+  m_Name: River Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

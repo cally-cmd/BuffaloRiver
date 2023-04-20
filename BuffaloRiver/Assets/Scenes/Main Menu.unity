@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 661473563}
   - component: {fileID: 661473566}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 1641628394}
   - component: {fileID: 1641628397}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1373,10 +1373,13 @@ MonoBehaviour:
   actualTime: 0
   ecosystemHealth: 0
   riverBeauty: 0
+  score: 0
   scoreText: {fileID: 0}
   calendarYear: {fileID: 0}
   paused: 0
   timePassing: 0
+  currentScore: 0
+  item1Price: 0
 --- !u!4 &1949871111
 Transform:
   m_ObjectHideFlags: 0
