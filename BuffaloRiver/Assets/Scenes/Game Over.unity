@@ -426,8 +426,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 44ba80d83d80f254f86a766f2b5f8eeb, type: 2}
-  m_sharedMaterial: {fileID: -1506747223266548294, guid: 44ba80d83d80f254f86a766f2b5f8eeb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f8326fc9f5a8b30f497b704fbf62fe40, type: 2}
+  m_sharedMaterial: {fileID: 1333972938964238231, guid: f8326fc9f5a8b30f497b704fbf62fe40, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -619,10 +619,13 @@ MonoBehaviour:
   actualTime: 0
   ecosystemHealth: 0
   riverBeauty: 0
+  score: 0
   scoreText: {fileID: 0}
   calendarYear: {fileID: 0}
   paused: 0
   timePassing: 0
+  currentScore: 0
+  item1Price: 0
 --- !u!4 &829451836
 Transform:
   m_ObjectHideFlags: 0
@@ -766,8 +769,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You Lost :(
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 48f21fe7adde26646a52aa5a44a42408, type: 2}
-  m_sharedMaterial: {fileID: 4397304329011221629, guid: 48f21fe7adde26646a52aa5a44a42408, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}
+  m_sharedMaterial: {fileID: -7949474625173199831, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

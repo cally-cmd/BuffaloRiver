@@ -342,8 +342,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Congrats! \n\nYou made it to the modern day... wanna try again?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}
+  m_sharedMaterial: {fileID: -7949474625173199831, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -561,8 +561,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 44ba80d83d80f254f86a766f2b5f8eeb, type: 2}
-  m_sharedMaterial: {fileID: -1506747223266548294, guid: 44ba80d83d80f254f86a766f2b5f8eeb, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f8326fc9f5a8b30f497b704fbf62fe40, type: 2}
+  m_sharedMaterial: {fileID: 1333972938964238231, guid: f8326fc9f5a8b30f497b704fbf62fe40, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
