@@ -689,8 +689,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: River Riches
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 48f21fe7adde26646a52aa5a44a42408, type: 2}
-  m_sharedMaterial: {fileID: 4397304329011221629, guid: 48f21fe7adde26646a52aa5a44a42408, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44ba80d83d80f254f86a766f2b5f8eeb, type: 2}
+  m_sharedMaterial: {fileID: -1506747223266548294, guid: 44ba80d83d80f254f86a766f2b5f8eeb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -1542,7 +1542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -67, y: -377}
+  m_AnchoredPosition: {x: -61, y: -334}
   m_SizeDelta: {x: 107.96301, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1158088760
@@ -1688,7 +1688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 404, y: -310}
+  m_AnchoredPosition: {x: 404, y: -272}
   m_SizeDelta: {x: 107.936, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1167223486
@@ -2498,8 +2498,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Fish Count:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 48f21fe7adde26646a52aa5a44a42408, type: 2}
-  m_sharedMaterial: {fileID: 4397304329011221629, guid: 48f21fe7adde26646a52aa5a44a42408, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44ba80d83d80f254f86a766f2b5f8eeb, type: 2}
+  m_sharedMaterial: {fileID: -1506747223266548294, guid: 44ba80d83d80f254f86a766f2b5f8eeb, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2905,7 +2905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 427, y: -245}
+  m_AnchoredPosition: {x: 427, y: -207}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993329428
