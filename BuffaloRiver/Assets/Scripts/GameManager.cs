@@ -23,6 +23,12 @@ public class GameManager : MonoBehaviour
     //shop
     public float currentScore;
     public int item1Price;
+    public int item2Price;
+    public int item3Price;
+
+    //click upgrade
+    public int UpgradeCost;
+    public TextMeshProUGUI UpgradeText;
     
 
 
@@ -88,6 +94,12 @@ public class GameManager : MonoBehaviour
             //amount += 2;
             //profit += 2;
         //}
+
+    }
+
+    public void upgrade()
+    {
+
 
     }
 
