@@ -7,6 +7,7 @@ public class PlayClick : MonoBehaviour
     // Start is called before the first frame update
 
     public AudioSource audio;
+
     void Start()
     {
         
@@ -21,6 +22,6 @@ public class PlayClick : MonoBehaviour
 
     public void Click(){
         audio.Play();
-        print("I am playing the click!");
+        print("Click");
     }
 }

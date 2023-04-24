@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlaySplash : MonoBehaviour
 {
     // Start is called before the first frame update
-
     public AudioSource audio;
+
     void Start()
     {
         
@@ -23,12 +23,13 @@ public class PlaySplash : MonoBehaviour
         if (!GameManager.Instance.paused){
             audio.Play();
             GameManager.Instance.riverEcon++;
-            print(GameManager.Instance.riverEcon);
+            // print(GameManager.Instance.riverEcon);
             DelaySplash();
         }
     }
 
     public IEnumerator DelaySplash() {
+        print("Delay");
         yield return new WaitForSeconds(0.5f);
     }
 }
