@@ -33,8 +33,8 @@ public class GameManager : MonoBehaviour
     public int UpgradeCost;
     public TextMeshProUGUI UpgradeText;
 
-    // input for healthbar image;
-    public Image healthBar;
+    // input for healthbar sprite;
+    public GameObject healthBar;
 
     void Awake()
     {
@@ -85,13 +85,13 @@ public class GameManager : MonoBehaviour
         }
 
         //shop
-        item1text.text = "$" + item1Price;
-        item2text.text = "$" + item2Price;
-        item3text.text = "$" + item3Price;
+        //item1text.text = "$" + item1Price;
+        //item2text.text = "$" + item2Price;
+        //item3text.text = "$" + item3Price;
 
 
         //upgrade
-        UpgradeText.text = "Cost: $" + UpgradeCost;
+        //UpgradeText.text = "Cost: $" + UpgradeCost;
 
 
         // temp inputs to test health system
@@ -158,14 +158,21 @@ public class GameManager : MonoBehaviour
     public void TakeDamage(float damage)
     {
         ecosystemHealth -= damage;
-        healthBar.fillAmount = ecosystemHealth / 100f;
+
+        //this currently adds 1. the y of the health bar is 7.363... but there's an inherent issue of it not 
+        //sticking to a spot on the ground. We can change that by adding a movement change after each damage change, 
+        //or just making the whole thing twice the size and then hiding the lower half beneath the land so it looks like it shirnks properly
+        float damagefraction = (damage/100f) * 7.36339f;
+        healthBar.transform.localScale += new Vector3(0f,-damagefraction,0f);
+
+        //ecosystemHealth / 100f;
     }
     // increases health
     public void Heal(float healingAmount)
     {
         ecosystemHealth += healingAmount;
         ecosystemHealth = Mathf.Clamp(ecosystemHealth, 0, 100);
-        healthBar.fillAmount = ecosystemHealth / 100f;
+        //healthBar.fillAmount = ecosystemHealth / 100f;
     }
 
 

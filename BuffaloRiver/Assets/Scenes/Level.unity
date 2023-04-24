@@ -266,7 +266,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.19458914, g: 0.8867924, b: 0.14556777, a: 1}
+  m_Color: {r: 0.15686275, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -276,21 +276,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &100542053
-Transform:
+--- !u!224 &100542053
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100542051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.42, y: -0.51, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.297046, y: 7.363339, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -5.42, y: -0.51}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &118444403
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,12 +2079,16 @@ MonoBehaviour:
   calendarYear: {fileID: 747111449}
   paused: 0
   timePassing: 0
-  currentScore: 0
+  ClickPower: 0
   item1Price: 0
+  item1text: {fileID: 0}
   item2Price: 0
+  item2text: {fileID: 0}
   item3Price: 0
+  item3text: {fileID: 0}
   UpgradeCost: 0
   UpgradeText: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!4 &1750293948
 Transform:
   m_ObjectHideFlags: 0
