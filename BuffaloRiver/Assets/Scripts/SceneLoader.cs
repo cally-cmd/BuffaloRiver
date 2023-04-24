@@ -13,6 +13,8 @@ public class SceneLoader : MonoBehaviour
         public IEnumerator DelayScene(string sceneName) {
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(sceneName);
+
+        
     }
     
 }
