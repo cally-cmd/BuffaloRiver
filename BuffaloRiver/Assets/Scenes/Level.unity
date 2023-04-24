@@ -1397,7 +1397,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -3645636351053061017, guid: ee442a0ed9b37a7459a31c5c4de8d9e3, type: 3}
+      - m_Target: {fileID: 4772399411620147170, guid: dedde2307fc8ecb46919c4cbde9d30ce, type: 3}
         m_TargetAssemblyTypeName: Fish, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 1
@@ -2076,6 +2076,10 @@ MonoBehaviour:
   timePassing: 0
   currentScore: 0
   item1Price: 0
+  item2Price: 0
+  item3Price: 0
+  UpgradeCost: 0
+  UpgradeText: {fileID: 0}
 --- !u!4 &1750293948
 Transform:
   m_ObjectHideFlags: 0
