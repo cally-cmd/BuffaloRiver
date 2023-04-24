@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
+    // public bool event;
+    // public int rand;
     // Start is called before the first frame update
     void Start()
     {
+        //event = false;
+        //rand = 
         
     }
 

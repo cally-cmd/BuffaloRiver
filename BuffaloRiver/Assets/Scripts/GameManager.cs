@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI calendarYear;
     public bool paused;
     public int timePassing;
+    public int ClickPower;
 
     //shop
     public float currentScore;
@@ -49,6 +50,7 @@ public class GameManager : MonoBehaviour
         riverBeauty = 100;
         timePassing = 2000;
         paused = false;
+        ClickPower = 1;
     }
 
     // Update is called once per frame
@@ -79,7 +81,7 @@ public class GameManager : MonoBehaviour
         
 
         //upgrade
-        //UpgradeText.text = "Cost: $" + UpgradeCost;
+        UpgradeText.text = "Cost: $" + UpgradeCost;
     }
 
     public void item1()
@@ -105,10 +107,15 @@ public class GameManager : MonoBehaviour
 
     public void upgrade()
     {
-        //if(currentScore >= UpgradeCost){
-            //currentScore -= UpgradeCost;
-
-        //}
+        print("Poverty");
+        print(riverEcon);
+        print(UpgradeCost);
+        if(riverEcon >= UpgradeCost){
+            print("purchased");
+            riverEcon -= UpgradeCost;
+            riverEcon *= 2;
+            UpgradeCost *= 3;
+        }
 
 
     }
