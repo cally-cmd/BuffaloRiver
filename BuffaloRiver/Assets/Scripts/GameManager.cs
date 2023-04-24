@@ -8,11 +8,11 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public static GameManager Instance {get; private set;}
+    public static GameManager Instance { get; private set; }
     public int riverEcon;
     public int timer;
     public int actualTime;
-    public int ecosystemHealth;
+    public float ecosystemHealth;
     public int riverBeauty;
     public int score;
     public TextMeshProUGUI scoreText;
@@ -32,23 +32,28 @@ public class GameManager : MonoBehaviour
     //click upgrade
     public int UpgradeCost;
     public TextMeshProUGUI UpgradeText;
-    
 
+    // input for healthbar image;
+    public Image healthBar;
 
-    void Awake() {
-       if (Instance == null) {
-           Instance = this;
-           DontDestroyOnLoad(gameObject);
-       } else {
-           Destroy(gameObject);
-       }
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     void Start()
     {
         riverEcon = 0;
         timer = 0;
         actualTime = 0;
-        ecosystemHealth = 100;
+        ecosystemHealth = 100f;
         riverBeauty = 100;
         timePassing = 2000;
         paused = false;
@@ -58,22 +63,22 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((actualTime > 2023) && (riverEcon < 50)){
+        if ((actualTime > 2023) && (riverEcon < 50))
+        {
             SceneManager.LoadScene("Game Over");
             riverEcon = 0;
             timer = 0;
             actualTime = 0;
-            ecosystemHealth = 100;
             riverBeauty = 100;
             timePassing = 2000;
             paused = true;
         }
-        else if ((actualTime > 2023)){
+        else if ((actualTime > 2023))
+        {
             SceneManager.LoadScene("Credits");
             riverEcon = 0;
             timer = 0;
             actualTime = 0;
-            ecosystemHealth = 100;
             riverBeauty = 100;
             timePassing = 2000;
             paused = true;
@@ -83,18 +88,31 @@ public class GameManager : MonoBehaviour
         item1text.text = "$" + item1Price;
         item2text.text = "$" + item2Price;
         item3text.text = "$" + item3Price;
-        
+
 
         //upgrade
         UpgradeText.text = "Cost: $" + UpgradeCost;
+
+
+        // temp inputs to test health system
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            TakeDamage(25);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Heal(25);
+        }
+
     }
 
     public void item1()
     {
         //if(currentScore >= item1Price){
-            //currentScore -= item1Price;
-            //amount += 5;
-            //profit += 5;
+        //currentScore -= item1Price;
+        //amount += 5;
+        //profit += 5;
         //}
 
 
@@ -103,9 +121,9 @@ public class GameManager : MonoBehaviour
     public void item2()
     {
         //if(currentScore >= item2Price){
-            //currentScore -= item2Price;
-            //amount += 2;
-            //profit += 2;
+        //currentScore -= item2Price;
+        //amount += 2;
+        //profit += 2;
         //}
 
     }
@@ -115,7 +133,8 @@ public class GameManager : MonoBehaviour
         print("Poverty");
         print(riverEcon);
         print(UpgradeCost);
-        if(riverEcon >= UpgradeCost){
+        if (riverEcon >= UpgradeCost)
+        {
             print("purchased");
             riverEcon -= UpgradeCost;
             riverEcon *= 2;
@@ -125,12 +144,28 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void pause(){
+    public void pause()
+    {
         paused = true;
     }
 
-    public void unpause(){
+    public void unpause()
+    {
         paused = false;
+    }
+
+    // lowers health
+    public void TakeDamage(float damage)
+    {
+        ecosystemHealth -= damage;
+        healthBar.fillAmount = ecosystemHealth / 100f;
+    }
+    // increases health
+    public void Heal(float healingAmount)
+    {
+        ecosystemHealth += healingAmount;
+        ecosystemHealth = Mathf.Clamp(ecosystemHealth, 0, 100);
+        healthBar.fillAmount = ecosystemHealth / 100f;
     }
 
 
