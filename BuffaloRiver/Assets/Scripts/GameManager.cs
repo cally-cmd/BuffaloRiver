@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
         
 
         //upgrade
-        UpgradeText.text = "Cost: $" + UpgradeCost;
+        //UpgradeText.text = "Cost: $" + UpgradeCost;
     }
 
     public void item1()
@@ -105,10 +105,10 @@ public class GameManager : MonoBehaviour
 
     public void upgrade()
     {
-        if(currentScore >= UpgradeCost){
-            currentScore -= UpgradeCost;
+        //if(currentScore >= UpgradeCost){
+            //currentScore -= UpgradeCost;
 
-        }
+        //}
 
 
     }
