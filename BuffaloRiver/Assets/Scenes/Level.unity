@@ -3050,6 +3050,7 @@ GameObject:
   - component: {fileID: 1000823069}
   - component: {fileID: 1000823068}
   - component: {fileID: 1000823067}
+  - component: {fileID: 1000823070}
   m_Layer: 5
   m_Name: River
   m_TagString: Untagged
@@ -3122,8 +3123,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4772399411620147170, guid: dedde2307fc8ecb46919c4cbde9d30ce, type: 3}
-        m_TargetAssemblyTypeName: Fish, Assembly-CSharp
+      - m_Target: {fileID: 1000823070}
+        m_TargetAssemblyTypeName: SpawnFish, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 1
         m_Arguments:
@@ -3184,6 +3185,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000823065}
   m_CullTransparentMesh: 1
+--- !u!114 &1000823070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000823065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87d5a99d17a48b3879f378ffd4a3bbc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fish1: {fileID: 1054662727161440162, guid: dedde2307fc8ecb46919c4cbde9d30ce, type: 3}
+  fish2: {fileID: 3145745756962333740, guid: b12b1984a506ca94cb1cc60eb012ad4c, type: 3}
 --- !u!1 &1004072397
 GameObject:
   m_ObjectHideFlags: 0
