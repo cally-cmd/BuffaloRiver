@@ -35,18 +35,18 @@ public class GameManager : MonoBehaviour
 
     // input for healthbar sprite;
     public GameObject healthBar;
-
-    void Awake()
+    
+    void Awake() 
     {
-        if (Instance == null)
+       if (Instance == null) 
+       {
+           Instance = this;
+           DontDestroyOnLoad(gameObject);
+       }
+        else 
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+           Destroy(gameObject);
+       }
     }
     void Start()
     {
@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
         //item1text.text = "$" + item1Price;
         //item2text.text = "$" + item2Price;
         //item3text.text = "$" + item3Price;
-
+        
 
         //upgrade
         //UpgradeText.text = "Cost: $" + UpgradeCost;
@@ -110,9 +110,9 @@ public class GameManager : MonoBehaviour
     public void item1()
     {
         //if(currentScore >= item1Price){
-        //currentScore -= item1Price;
-        //amount += 5;
-        //profit += 5;
+            //currentScore -= item1Price;
+            //amount += 5;
+            //profit += 5;
         //}
 
 
@@ -121,9 +121,9 @@ public class GameManager : MonoBehaviour
     public void item2()
     {
         //if(currentScore >= item2Price){
-        //currentScore -= item2Price;
-        //amount += 2;
-        //profit += 2;
+            //currentScore -= item2Price;
+            //amount += 2;
+            //profit += 2;
         //}
 
     }
@@ -159,8 +159,8 @@ public class GameManager : MonoBehaviour
     {
         ecosystemHealth -= damage;
 
-        //this currently adds 1. the y of the health bar is 7.363... but there's an inherent issue of it not 
-        //sticking to a spot on the ground. We can change that by adding a movement change after each damage change, 
+        //this currently adds 1. the y of the health bar is 7.363... but there's an inherent issue of it not
+        //sticking to a spot on the ground. We can change that by adding a movement change after each damage change,
         //or just making the whole thing twice the size and then hiding the lower half beneath the land so it looks like it shirnks properly
         float damagefraction = (damage/100f) * 7.36339f;
         healthBar.transform.localScale += new Vector3(0f,-damagefraction,0f);
@@ -174,6 +174,6 @@ public class GameManager : MonoBehaviour
         ecosystemHealth = Mathf.Clamp(ecosystemHealth, 0, 100);
         //healthBar.fillAmount = ecosystemHealth / 100f;
     }
-
+    
 
 }
