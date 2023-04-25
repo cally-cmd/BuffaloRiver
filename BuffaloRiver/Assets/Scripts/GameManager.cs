@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        riverEcon = 0;
+        riverEcon = 1;
         timer = 0;
         actualTime = 0;
         ecosystemHealth = 100f;

@@ -22,7 +22,7 @@ public class PlaySplash : MonoBehaviour
     public void Click(){
         if (!GameManager.Instance.paused){
             audio.Play();
-            GameManager.Instance.money += GameManager.Instance.riverEcon++;
+            GameManager.Instance.money += GameManager.Instance.riverEcon;
             // print(GameManager.Instance.riverEcon);
             DelaySplash();
         }
