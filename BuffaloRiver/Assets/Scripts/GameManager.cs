@@ -112,13 +112,13 @@ public class GameManager : MonoBehaviour
         }
 
         //shop
-        item1text.text = "$" + item1Price;
-        item2text.text = "$" + item2Price;
+        //item1text.text = "$" + item1Price;
+        //item2text.text = "$" + item2Price;
         //item3text.text = "$" + item3Price;
         
 
         //upgrade
-        UpgradeText.text = "Cost: $" + UpgradeCost;
+        //UpgradeText.text = "Cost: $" + UpgradeCost;
 
 
         // temp inputs to test health system
