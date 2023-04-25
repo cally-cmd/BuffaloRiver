@@ -28,11 +28,11 @@ public class GameManager : MonoBehaviour
     public int ClickPower;
 
     //shop - the texts are covered in levelmanager
-    public int item1Price = 5;
+    public int item1Price;
     //public TextMeshProUGUI item1text;
-    public int item2Price = 10;
+    public int item2Price;
     //public TextMeshProUGUI item2text;
-    public int item3Price = 15;
+    public int item3Price;
     //public TextMeshProUGUI item3text;
 
     //money gains
@@ -76,6 +76,8 @@ public class GameManager : MonoBehaviour
         factoryNumber = 0;
         boatNumber = 0;
         UpgradeCost = 20;
+        item1Price = 5;
+        item2Price = 10;
     }
 
     // Update is called once per frame
@@ -96,6 +98,8 @@ public class GameManager : MonoBehaviour
             boatNumber = 0;
             paused = true;
             UpgradeCost = 20;
+            item1Price = 5;
+            item2Price = 10;
         }
         else if ((actualTime > 2023))
         {
@@ -112,6 +116,8 @@ public class GameManager : MonoBehaviour
             boatNumber = 0;
             paused = true;
             UpgradeCost = 20;
+            item1Price = 5;
+            item2Price = 10;
         }
 
         //shop
@@ -125,15 +131,15 @@ public class GameManager : MonoBehaviour
 
 
         // temp inputs to test health system
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            TakeDamage(-25);
-        }
+        // if (Input.GetKeyDown(KeyCode.Return))
+        // {
+        //     TakeDamage(-25);
+        // }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Heal(25);
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     Heal(25);
+        // }
 
     }
 

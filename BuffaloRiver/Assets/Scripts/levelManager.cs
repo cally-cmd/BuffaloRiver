@@ -53,7 +53,7 @@ public class levelManager : MonoBehaviour
                 }
             GameManager.Instance.money += GameManager.Instance.moneyGains;
         }
-        scoreText.text = GameManager.Instance.money.ToString();
+        scoreText.text = "$" + GameManager.Instance.money.ToString();
         calendarYear.text = GameManager.Instance.actualTime.ToString();
         item1text.text = "$" + GameManager.Instance.item1Price.ToString();
         item2text.text = "$" + GameManager.Instance.item2Price.ToString();
@@ -80,6 +80,14 @@ public class levelManager : MonoBehaviour
     public void closeHelp(){
         helpButtonClose.SetActive(false);
         helpButtonOpen.SetActive(true);
+    }
+
+    public void faster(){
+        GameManager.Instance.timePassing /= 2;
+    }
+
+    public void slower(){
+        GameManager.Instance.timePassing *= 2;
     }
 
     public void healthAdjust(float change){
@@ -120,5 +128,16 @@ public class levelManager : MonoBehaviour
 
     }
 
+    public void buyItem1(){
+        GameManager.Instance.item1();
+        print("boat buy check");
+    }
 
+    public void buyItem2(){
+        GameManager.Instance.item2();
+    }
+
+    public void buyUpgrade(){
+        GameManager.Instance.upgrade();
+    }
 }
