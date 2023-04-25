@@ -85,13 +85,13 @@ public class GameManager : MonoBehaviour
         }
 
         //shop
-        //item1text.text = "$" + item1Price;
-        //item2text.text = "$" + item2Price;
+        item1text.text = "$" + item1Price;
+        item2text.text = "$" + item2Price;
         //item3text.text = "$" + item3Price;
         
 
         //upgrade
-        //UpgradeText.text = "Cost: $" + UpgradeCost;
+        UpgradeText.text = "Cost: $" + UpgradeCost;
 
 
         // temp inputs to test health system
@@ -109,22 +109,22 @@ public class GameManager : MonoBehaviour
 
     public void item1()
     {
-        //if(currentScore >= item1Price){
-            //currentScore -= item1Price;
+        if(riverEcon >= item1Price){
+            riverEcon -= item1Price;
             //amount += 5;
             //profit += 5;
-        //}
+        }
 
 
     }
 
     public void item2()
     {
-        //if(currentScore >= item2Price){
-            //currentScore -= item2Price;
+        if(riverEcon >= item2Price){
+            riverEcon -= item2Price;
             //amount += 2;
             //profit += 2;
-        //}
+        }
 
     }
 
