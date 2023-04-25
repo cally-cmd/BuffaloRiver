@@ -340,7 +340,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Congrats! \n\nYou made it to the modern day... wanna try again?"
+  m_text: "Congrats! \n\nYou made it to the modern day with your river still alive...
+    wanna try again?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}
   m_sharedMaterial: {fileID: -7949474625173199831, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}

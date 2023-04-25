@@ -27,13 +27,13 @@ public class GameManager : MonoBehaviour
     public int timePassing;
     public int ClickPower;
 
-    //shop
+    //shop - the texts are covered in levelmanager
     public int item1Price = 5;
-    public TextMeshProUGUI item1text;
+    //public TextMeshProUGUI item1text;
     public int item2Price = 10;
-    public TextMeshProUGUI item2text;
+    //public TextMeshProUGUI item2text;
     public int item3Price = 15;
-    public TextMeshProUGUI item3text;
+    //public TextMeshProUGUI item3text;
 
     //money gains
     public int riverEcon;
@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
         ClickPower = 1;
         factoryNumber = 0;
         boatNumber = 0;
+        UpgradeCost = 20;
     }
 
     // Update is called once per frame
@@ -83,7 +84,7 @@ public class GameManager : MonoBehaviour
         if (ecosystemHealth < 1)
         {
             SceneManager.LoadScene("Game Over");
-            riverEcon = 0;
+            riverEcon = 5;
             timer = 0;
             ecosystemHealth = 100f;
             actualTime = 0;
@@ -94,11 +95,12 @@ public class GameManager : MonoBehaviour
             factoryNumber = 0;
             boatNumber = 0;
             paused = true;
+            UpgradeCost = 20;
         }
         else if ((actualTime > 2023))
         {
             SceneManager.LoadScene("Credits");
-            riverEcon = 0;
+            riverEcon = 5;
             timer = 0;
             ecosystemHealth = 100f;
             actualTime = 0;
@@ -109,6 +111,7 @@ public class GameManager : MonoBehaviour
             factoryNumber = 0;
             boatNumber = 0;
             paused = true;
+            UpgradeCost = 20;
         }
 
         //shop
@@ -134,12 +137,13 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void item1()
+    public void item1() //tourism boat
     {
         if(money >= item1Price){
             money -= item1Price;
             moneyGains += 5;
             boatNumber++;
+            item1Price *= 2;
 
             //amount += 5;
             //profit += 5;
@@ -148,12 +152,13 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void item2()
+    public void item2() //factory
     {
         if(money >= item2Price){
             money -= item2Price;
             moneyGains += 10;
             factoryNumber++;
+            item2Price *= 2;
 
             //amount += 2;
             //profit += 2;
