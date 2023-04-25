@@ -1,12 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fish : MonoBehaviour
+public class SpawnFish : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject fish1;
     public GameObject fish2;
+    private GameObject obj;
 
     void Start()
     {
@@ -31,7 +31,7 @@ public class Fish : MonoBehaviour
 
     public void Jump() {
 
-        GameObject obj = WhichFish();
+        obj = WhichFish();
 
         //Float bounds for x position: (-1.6, -3.75)
         //Float bounds for y position: (0.5, 3.5)
