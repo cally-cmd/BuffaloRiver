@@ -6,6 +6,8 @@ public class Fish : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject fish1;
+    public GameObject fish2;
+
     void Start()
     {
 
@@ -17,7 +19,30 @@ public class Fish : MonoBehaviour
     
     }
 
+    private GameObject WhichFish() {
+        int id = Random.Range(0, 2) * 10;
+        
+        if (id <= 5f) {
+            return fish1;
+        } else {
+            return fish2;
+        }
+    }
+
     public void Jump() {
-        Instantiate(fish1);
+
+        GameObject obj = WhichFish();
+
+        //Float bounds for x position: (-1.6, -3.75)
+        //Float bounds for y position: (0.5, 3.5)
+        
+        float lowerXBound = -3.75f;
+        float upperXBound = -1.6f;
+        float lowerYBound = 0.5f;
+        float upperYBound = 3.5f;
+
+        Vector2 pos = new Vector2(Random.Range(lowerXBound, upperXBound), Random.Range(lowerYBound, upperYBound));
+
+        Instantiate(obj, pos, Quaternion.identity, transform);
     }
 }
