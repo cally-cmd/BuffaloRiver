@@ -43,6 +43,6 @@ public class Fish : MonoBehaviour
 
         Vector2 pos = new Vector2(Random.Range(lowerXBound, upperXBound), Random.Range(lowerYBound, upperYBound));
 
-        //Instantiate(obj, pos, Quaternion.identity, transform);
+        Instantiate(obj, pos, Quaternion.identity, transform);
     }
 }
