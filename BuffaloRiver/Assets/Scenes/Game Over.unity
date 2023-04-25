@@ -614,18 +614,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f966cec0108ea4f4c879d18632472a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riverEcon: 0
   timer: 0
   actualTime: 0
   ecosystemHealth: 0
   riverBeauty: 0
-  score: 0
-  scoreText: {fileID: 0}
-  calendarYear: {fileID: 0}
+  money: 0
+  maxHealth: 0
+  maxBeauty: 0
   paused: 0
   timePassing: 0
-  currentScore: 0
+  ClickPower: 0
   item1Price: 0
+  item1text: {fileID: 0}
+  item2Price: 10
+  item2text: {fileID: 0}
+  item3Price: 15
+  item3text: {fileID: 0}
+  riverEcon: 0
+  moneyGains: 0
+  factoryNumber: 0
+  boatNumber: 0
+  UpgradeCost: 0
+  UpgradeText: {fileID: 0}
 --- !u!4 &829451836
 Transform:
   m_ObjectHideFlags: 0
@@ -1021,7 +1031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
