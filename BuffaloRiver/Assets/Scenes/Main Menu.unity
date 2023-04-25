@@ -1026,7 +1026,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level
+          m_StringArgument: IntroScene
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1896800942}
@@ -1043,7 +1043,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1949871110}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: unpause
+        m_MethodName: pause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1460,7 +1460,7 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 0}
   calendarYear: {fileID: 0}
-  paused: 0
+  paused: 1
   timePassing: 0
   ClickPower: 0
   item1Price: 0
