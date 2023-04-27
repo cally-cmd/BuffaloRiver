@@ -683,7 +683,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: d5e0fd0a8b8f8424f87c22b4bc559e1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5986,6 +5986,7 @@ MonoBehaviour:
   boatUpgradeButton: {fileID: 1138198907}
   factory: {fileID: 246881857}
   factoryClip: {fileID: 1634607509}
+  touristBoat: {fileID: 228477166}
   riverEcon: 0
   moneyGains: 0
   factoryNumber: 0
@@ -7378,6 +7379,10 @@ PrefabInstance:
     - target: {fileID: 8239832866405752158, guid: 7e70b232eb8dbd3f89d1b0a6b1390641, type: 3}
       propertyPath: m_Name
       value: Tourist Boat
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239832866405752158, guid: 7e70b232eb8dbd3f89d1b0a6b1390641, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e70b232eb8dbd3f89d1b0a6b1390641, type: 3}

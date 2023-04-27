@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public float riverBeauty;
     public int money;
     private bool purchasedFactory;
+    private bool purchasedBoat;
 
     //now handled in levelmanager
     //public TextMeshProUGUI scoreText;
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject factory;
     public AudioSource factoryClip;
+    public GameObject touristBoat;
 
     //money gains
     public int riverEcon;
@@ -88,6 +90,8 @@ public class GameManager : MonoBehaviour
         item1Price = 5;
         item2Price = 10;
         purchasedFactory = false;
+        touristBoat.SetActive(false);
+        purchasedBoat = false;
     }
 
     // Update is called once per frame
@@ -181,6 +185,9 @@ public class GameManager : MonoBehaviour
             moneyGains += 5;
             boatNumber++;
             item1Price *= 2;
+            if (!purchasedBoat) {
+                touristBoat.SetActive(true);
+            }
 
             //amount += 5;
             //profit += 5;
@@ -198,6 +205,7 @@ public class GameManager : MonoBehaviour
             item2Price *= 2;
             if (!purchasedFactory) {
                 factory.SetActive(true);
+                purchasedFactory = true;
             }
             factorySubscript.text = factoryNumber.ToString();
             //amount += 2;
