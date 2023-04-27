@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     public float ecosystemHealth;
     public float riverBeauty;
     public int money;
-    
+    private bool purchasedFactory;
+
     //now handled in levelmanager
     //public TextMeshProUGUI scoreText;
     //public TextMeshProUGUI calendarYear;
@@ -40,6 +41,9 @@ public class GameManager : MonoBehaviour
     public GameObject factoryUpgradeButton;
     public GameObject boatUpgradeButton;
 
+    public GameObject factory;
+    public AudioSource factoryClip;
+
     //money gains
     public int riverEcon;
     public int moneyGains;
@@ -49,7 +53,7 @@ public class GameManager : MonoBehaviour
     //click upgrade
     public int UpgradeCost;
     public TextMeshProUGUI UpgradeText;
-
+    public TextMeshProUGUI factorySubscript;
     // input for healthbar sprite;
     //unnecessary now
     //public GameObject healthBar;
@@ -83,6 +87,7 @@ public class GameManager : MonoBehaviour
         UpgradeCost = 20;
         item1Price = 5;
         item2Price = 10;
+        purchasedFactory = false;
     }
 
     // Update is called once per frame
@@ -191,9 +196,14 @@ public class GameManager : MonoBehaviour
             moneyGains += 10;
             factoryNumber++;
             item2Price *= 2;
-
+            if (!purchasedFactory) {
+                factory.SetActive(true);
+            }
+            factorySubscript.text = factoryNumber.ToString();
             //amount += 2;
             //profit += 2;
+
+            // StartCoroutine(PlayAndDelay());
         }
 
     }
@@ -259,6 +269,15 @@ public class GameManager : MonoBehaviour
     public void Cleansing(float recovery){
         riverBeauty += recovery;
     }
-    
+
+    // public IEnumerator PlayAndDelay() {
+    //     factoryClip.Play();
+    //     yield return new WaitForSeconds(3f);
+    // }
+    //
+    // private void PlayFactoryClip() {
+    //     factoryClip.Play();
+    //     print("Factory Clip");
+    // }
 
 }

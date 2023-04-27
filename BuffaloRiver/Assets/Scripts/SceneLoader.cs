@@ -10,7 +10,7 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(DelayScene(sceneName));
     }
 
-        public IEnumerator DelayScene(string sceneName) {
+    public IEnumerator DelayScene(string sceneName) {
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(sceneName);
 
