@@ -8,7 +8,7 @@ public class ClickFish : MonoBehaviour
 
   void OnMouseDown() {
     Destroy(obj);
-    GameManager.Instance.riverEcon += 2;
+    GameManager.Instance.money += 2 + GameManager.Instance.riverEcon;
   }
 }
 

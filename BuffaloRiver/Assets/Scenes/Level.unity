@@ -5133,6 +5133,9 @@ MonoBehaviour:
   item1Price: 50
   item2Price: 20
   item3Price: 0
+  incomeUpgradeButton: {fileID: 490159946}
+  factoryUpgradeButton: {fileID: 659851879}
+  boatUpgradeButton: {fileID: 1138198907}
   riverEcon: 0
   moneyGains: 0
   factoryNumber: 0
@@ -6370,8 +6373,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}
+  m_sharedMaterial: {fileID: -7949474625173199831, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

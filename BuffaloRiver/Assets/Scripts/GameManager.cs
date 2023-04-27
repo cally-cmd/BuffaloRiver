@@ -28,12 +28,17 @@ public class GameManager : MonoBehaviour
     public int ClickPower;
 
     //shop - the texts are covered in levelmanager
-    public int item1Price;
+    public int item1Price; //This is the boat price.
     //public TextMeshProUGUI item1text;
-    public int item2Price;
+    public int item2Price; //This is the factory price.
     //public TextMeshProUGUI item2text;
     public int item3Price;
     //public TextMeshProUGUI item3text;
+    
+    //Shop buttons 
+    public GameObject incomeUpgradeButton;
+    public GameObject factoryUpgradeButton;
+    public GameObject boatUpgradeButton;
 
     //money gains
     public int riverEcon;
@@ -118,6 +123,27 @@ public class GameManager : MonoBehaviour
             UpgradeCost = 20;
             item1Price = 5;
             item2Price = 10;
+        }
+
+        //Disable the upgrade buy button when the player cannot afford.
+        if (money < UpgradeCost) {
+            incomeUpgradeButton.SetActive(false);
+        } else {
+            incomeUpgradeButton.SetActive(true);
+        }
+        
+        //Disable the boat buy button when the player cannot afford.
+        if (money < item1Price) {
+            boatUpgradeButton.SetActive(false);
+        } else {
+            boatUpgradeButton.SetActive(true);
+        }
+
+        //Disable the factory buy button when player cannot afford.
+        if (money < item2Price) {
+            factoryUpgradeButton.SetActive(false);
+        } else {
+            factoryUpgradeButton.SetActive(true);
         }
 
         //shop
