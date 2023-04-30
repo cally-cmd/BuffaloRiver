@@ -105,6 +105,25 @@ public class levelManager : MonoBehaviour
                 GameManager.Instance.TakeDamage(change);
             }
         }
+
+        HealthAudioAdjust(GameManager.Instance.ecosystemHealth, GameManager.Instance.healthMusic);
+    }
+
+    private void HealthAudioAdjust(float health, AudioClip[] healthMusic) {
+        print(health);
+        if (health >= 76) {
+            AudioManager.Instance.SwapTrack(healthMusic[0]);
+            print("First Quarter");
+        } else if (health >= 51 && health <= 75) {
+            AudioManager.Instance.SwapTrack(healthMusic[1]);
+            print("Second Quarter");
+        } else if (health >= 26 && health <= 50) {
+            AudioManager.Instance.SwapTrack(healthMusic[2]);
+            print("Third Quarter");
+        } else {
+            AudioManager.Instance.SwapTrack(healthMusic[3]);
+            print("Fourth Quarter");
+        }
     }
 
     public void beautyAdjust(float change){

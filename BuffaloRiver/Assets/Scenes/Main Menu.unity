@@ -592,8 +592,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 19f7ec3247608eb22b3a105f3badc4c6, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1201,8 +1201,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 19f7ec3247608eb22b3a105f3badc4c6, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1599,6 +1599,8 @@ MonoBehaviour:
   factory: {fileID: 0}
   factoryClip: {fileID: 0}
   touristBoat: {fileID: 0}
+  dock: {fileID: 0}
+  healthMusic: []
   riverEcon: 0
   moneyGains: 0
   factoryNumber: 0
@@ -1606,6 +1608,7 @@ MonoBehaviour:
   UpgradeCost: 0
   UpgradeText: {fileID: 0}
   factorySubscript: {fileID: 0}
+  boatSubscript: {fileID: 0}
 --- !u!4 &1949871111
 Transform:
   m_ObjectHideFlags: 0

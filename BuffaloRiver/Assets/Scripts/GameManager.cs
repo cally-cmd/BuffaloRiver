@@ -45,6 +45,9 @@ public class GameManager : MonoBehaviour
     public GameObject factory;
     public AudioSource factoryClip;
     public GameObject touristBoat;
+    public GameObject dock;
+
+    public AudioClip[] healthMusic;
 
     //money gains
     public int riverEcon;
@@ -56,6 +59,7 @@ public class GameManager : MonoBehaviour
     public int UpgradeCost;
     public TextMeshProUGUI UpgradeText;
     public TextMeshProUGUI factorySubscript;
+    public TextMeshProUGUI boatSubscript;
     // input for healthbar sprite;
     //unnecessary now
     //public GameObject healthBar;
@@ -187,7 +191,9 @@ public class GameManager : MonoBehaviour
             item1Price *= 2;
             if (!purchasedBoat) {
                 touristBoat.SetActive(true);
+                dock.SetActive(true);
             }
+            boatSubscript.text = boatNumber.ToString();
 
             //amount += 5;
             //profit += 5;
