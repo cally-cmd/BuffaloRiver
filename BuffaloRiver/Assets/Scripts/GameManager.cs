@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     public float ecosystemHealth;
     public float riverBeauty;
     public int money;
-    private bool purchasedFactory;
-    private bool purchasedBoat;
+    public bool purchasedFactory;
+    public bool purchasedBoat;
     
     //now handled in levelmanager
     //public TextMeshProUGUI scoreText;
@@ -38,14 +38,14 @@ public class GameManager : MonoBehaviour
     //public TextMeshProUGUI item3text;
     
     //Shop buttons 
-    public GameObject incomeUpgradeButton;
-    public GameObject factoryUpgradeButton;
-    public GameObject boatUpgradeButton;
+    // public GameObject incomeUpgradeButton;
+    // public GameObject factoryUpgradeButton;
+    // public GameObject boatUpgradeButton;
 
-    public GameObject factory;
-    public AudioSource factoryClip;
-    public GameObject touristBoat;
-    public GameObject dock;
+    // public GameObject factory;
+    // public AudioSource factoryClip;
+    // public GameObject touristBoat;
+    // public GameObject dock;
 
     public AudioClip[] healthMusic;
 
@@ -57,9 +57,11 @@ public class GameManager : MonoBehaviour
 
     //click upgrade
     public int UpgradeCost;
-    public TextMeshProUGUI UpgradeText;
-    public TextMeshProUGUI factorySubscript;
-    public TextMeshProUGUI boatSubscript;
+    //moved to levelManager
+    //public TextMeshProUGUI UpgradeText;
+    //public TextMeshProUGUI factorySubscript;
+    //public TextMeshProUGUI boatSubscript;
+    
     // input for healthbar sprite;
     //unnecessary now
     //public GameObject healthBar;
@@ -98,7 +100,8 @@ public class GameManager : MonoBehaviour
         item1Price = 5;
         item2Price = 10;
         purchasedFactory = false;
-        touristBoat.SetActive(false);
+        //moved to levelManager
+        //touristBoat.SetActive(false);
         purchasedBoat = false;
     }
 
@@ -142,26 +145,28 @@ public class GameManager : MonoBehaviour
             item2Price = 10;
         }
 
-        //Disable the upgrade buy button when the player cannot afford.
-        if (money < UpgradeCost) {
-            incomeUpgradeButton.SetActive(false);
-        } else {
-            incomeUpgradeButton.SetActive(true);
-        }
-        
-        //Disable the boat buy button when the player cannot afford.
-        if (money < item1Price) {
-            boatUpgradeButton.SetActive(false);
-        } else {
-            boatUpgradeButton.SetActive(true);
-        }
 
-        //Disable the factory buy button when player cannot afford.
-        if (money < item2Price) {
-            factoryUpgradeButton.SetActive(false);
-        } else {
-            factoryUpgradeButton.SetActive(true);
-        }
+        //moved to levelManager
+        // //Disable the upgrade buy button when the player cannot afford.
+        // if (money < UpgradeCost) {
+        //     incomeUpgradeButton.SetActive(false);
+        // } else {
+        //     incomeUpgradeButton.SetActive(true);
+        // }
+        
+        // //Disable the boat buy button when the player cannot afford.
+        // if (money < item1Price) {
+        //     boatUpgradeButton.SetActive(false);
+        // } else {
+        //     boatUpgradeButton.SetActive(true);
+        // }
+
+        // //Disable the factory buy button when player cannot afford.
+        // if (money < item2Price) {
+        //     factoryUpgradeButton.SetActive(false);
+        // } else {
+        //     factoryUpgradeButton.SetActive(true);
+        // }
 
         //shop
         //item1text.text = "$" + item1Price;
@@ -186,7 +191,7 @@ public class GameManager : MonoBehaviour
 
         //Random event
         //if(nowIsEvent == false && time is not a specific year){
-            StartCoroutine(WaitForEvent());
+        //    StartCoroutine(WaitForEvent());
 
         //}
 
@@ -204,11 +209,13 @@ public class GameManager : MonoBehaviour
             moneyGains += 5;
             boatNumber++;
             item1Price *= 2;
-            if (!purchasedBoat) {
-                touristBoat.SetActive(true);
-                dock.SetActive(true);
-            }
-            boatSubscript.text = boatNumber.ToString();
+            
+            // moved to levelManager
+            // if (!purchasedBoat) {
+            //     touristBoat.SetActive(true);
+            //     dock.SetActive(true);
+            // }
+            // boatSubscript.text = boatNumber.ToString();
 
             //amount += 5;
             //profit += 5;
@@ -224,13 +231,14 @@ public class GameManager : MonoBehaviour
             moneyGains += 10;
             factoryNumber++;
             item2Price *= 2;
-            if (!purchasedFactory) {
-                factory.SetActive(true);
-                purchasedFactory = true;
-            }
-            factorySubscript.text = factoryNumber.ToString();
-            //amount += 2;
-            //profit += 2;
+
+            //moved to levelManager
+            // if (!purchasedFactory) {
+            //     factory.SetActive(true);
+            //     purchasedFactory = true;
+            // }
+            // factorySubscript.text = factoryNumber.ToString();
+            
 
             // StartCoroutine(PlayAndDelay());
         }

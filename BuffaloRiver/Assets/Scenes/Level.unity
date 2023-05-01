@@ -1718,8 +1718,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628998223}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.00000047683716, y: -0.0000023841858, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4034,6 +4034,15 @@ MonoBehaviour:
   item1text: {fileID: 1618273364}
   item2text: {fileID: 2087276541}
   UpgradeText: {fileID: 929121722}
+  factorySubscript: {fileID: 12649955}
+  boatSubscript: {fileID: 1331782227}
+  incomeUpgradeButton: {fileID: 490159946}
+  factoryUpgradeButton: {fileID: 659851879}
+  boatUpgradeButton: {fileID: 1138198907}
+  factory: {fileID: 246881857}
+  factoryClip: {fileID: 1634607509}
+  touristBoat: {fileID: 228477166}
+  dock: {fileID: 231994381}
 --- !u!4 &1004072399
 Transform:
   m_ObjectHideFlags: 0
@@ -6252,6 +6261,8 @@ MonoBehaviour:
   ecosystemHealth: 0
   riverBeauty: 0
   money: 0
+  purchasedFactory: 0
+  purchasedBoat: 0
   maxHealth: 0
   maxBeauty: 0
   paused: 0
@@ -6260,13 +6271,6 @@ MonoBehaviour:
   item1Price: 50
   item2Price: 20
   item3Price: 0
-  incomeUpgradeButton: {fileID: 490159946}
-  factoryUpgradeButton: {fileID: 659851879}
-  boatUpgradeButton: {fileID: 1138198907}
-  factory: {fileID: 246881857}
-  factoryClip: {fileID: 1634607509}
-  touristBoat: {fileID: 228477166}
-  dock: {fileID: 231994381}
   healthMusic:
   - {fileID: 8300000, guid: 0e43ec695dc22d84c8a5eedb738900d0, type: 3}
   - {fileID: 8300000, guid: 5a83c6df148052148a00354f85e4695b, type: 3}
@@ -6277,9 +6281,7 @@ MonoBehaviour:
   factoryNumber: 0
   boatNumber: 0
   UpgradeCost: 20
-  UpgradeText: {fileID: 929121722}
-  factorySubscript: {fileID: 12649955}
-  boatSubscript: {fileID: 1331782227}
+  nowIsEvent: 0
 --- !u!4 &1750293948
 Transform:
   m_ObjectHideFlags: 0

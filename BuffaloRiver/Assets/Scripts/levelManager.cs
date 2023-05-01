@@ -26,11 +26,27 @@ public class levelManager : MonoBehaviour
     public TextMeshProUGUI item2text;
     //public TextMeshProUGUI item3text; -> currently unused, need to add the health and beauty recovery items but we probably won't get those done by tuesday
     public TextMeshProUGUI UpgradeText;
+
+    //from game manager
+    public TextMeshProUGUI factorySubscript;
+    public TextMeshProUGUI boatSubscript;
+
     
+    //shop buttons
+    public GameObject incomeUpgradeButton;
+    public GameObject factoryUpgradeButton;
+    public GameObject boatUpgradeButton;
+
+    public GameObject factory;
+    public AudioSource factoryClip;
+    public GameObject touristBoat;
+    public GameObject dock;
+
     // Start is called before the first frame update
     void Start()
     {
         previousTime = 1972;
+        touristBoat.SetActive(false);
     }
 
     // Update is called once per frame
@@ -58,6 +74,30 @@ public class levelManager : MonoBehaviour
         item1text.text = "$" + GameManager.Instance.item1Price.ToString();
         item2text.text = "$" + GameManager.Instance.item2Price.ToString();
         UpgradeText.text = "$" + GameManager.Instance.UpgradeCost.ToString();
+
+
+        // from GameManager
+        //Disable the upgrade buy button when the player cannot afford.
+        if (GameManager.Instance.money < GameManager.Instance.UpgradeCost) {
+            incomeUpgradeButton.SetActive(false);
+        } else {
+            incomeUpgradeButton.SetActive(true);
+        }
+        
+        //Disable the boat buy button when the player cannot afford.
+        if (GameManager.Instance.money < GameManager.Instance.item1Price) {
+            boatUpgradeButton.SetActive(false);
+        } else {
+            boatUpgradeButton.SetActive(true);
+        }
+
+        //Disable the factory buy button when player cannot afford.
+        if (GameManager.Instance.money < GameManager.Instance.item2Price) {
+            factoryUpgradeButton.SetActive(false);
+        } else {
+            factoryUpgradeButton.SetActive(true);
+        }
+
     }
 
     public void levelPause(){
@@ -150,10 +190,21 @@ public class levelManager : MonoBehaviour
     public void buyItem1(){
         GameManager.Instance.item1();
         print("boat buy check");
+        if (!GameManager.Instance.purchasedBoat) {
+                touristBoat.SetActive(true);
+                dock.SetActive(true);
+                GameManager.Instance.purchasedBoat = true;
+            }
+            boatSubscript.text = GameManager.Instance.boatNumber.ToString();
     }
 
     public void buyItem2(){
         GameManager.Instance.item2();
+        if (!GameManager.Instance.purchasedFactory) {
+                factory.SetActive(true);
+                GameManager.Instance.purchasedFactory = true;
+            }
+            factorySubscript.text = GameManager.Instance.factoryNumber.ToString();
     }
 
     public void buyUpgrade(){
