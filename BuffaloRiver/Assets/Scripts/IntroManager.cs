@@ -16,7 +16,7 @@ public class IntroManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(TypeText(text));
+        GameManager.Instance.DialogShow(dialogText, text);
     }
 
     // Update is called once per frame
@@ -25,11 +25,4 @@ public class IntroManager : MonoBehaviour
         
     }
 
-    IEnumerator TypeText(string text) {
-        dialogText.text = "";
-        foreach (char c in text.ToCharArray()) {
-            dialogText.text += c;
-            yield return new WaitForSeconds(0.05f);
-        }
-    }
 }

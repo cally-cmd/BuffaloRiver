@@ -370,7 +370,18 @@ public class GameManager : MonoBehaviour
         
     }
 
-    //public void
+    public void DialogShow(TextMeshProUGUI dialogText, string text) {
+        StopAllCoroutines();
+        StartCoroutine(TypeText(dialogText, text));
+    }
+    
+    private IEnumerator TypeText(TextMeshProUGUI dialogText, string text) {
+        dialogText.text = "";
+        foreach (char c in text.ToCharArray()) {
+            dialogText.text += c;
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
     
 
 }
