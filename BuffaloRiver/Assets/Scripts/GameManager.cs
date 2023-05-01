@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
             UpgradeCost = 20;
             item1Price = 5;
             item2Price = 10;
-            moeny = 0;
+            money = 0;
         }
         else if ((actualTime > 2023))
         {
