@@ -393,8 +393,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Government Has Bought A Small Amount Of Your Land For Preservation
-    Efforts. You Will Be Given $100 For This Land.
+  m_text: 'The Government Has Bought A Small Amount Of Your Land For Preservation
+    Efforts. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}
   m_sharedMaterial: {fileID: -7949474625173199831, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}
