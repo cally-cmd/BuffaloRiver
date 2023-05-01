@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/flood_event.unity
     guid: 3f8ce1efdaa1b754b9a5ee5a2d0d103e
   - enabled: 1
-    path: Assets/Scenes/Ecoli_Event.unity
+    path: Assets/Scenes/Algal_Event.unity
     guid: 489282371f2244c4caad7cd2fcfa80a0
   - enabled: 1
     path: Assets/Scenes/Ice_storm.unity
