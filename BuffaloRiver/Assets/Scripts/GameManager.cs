@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public int money;
     private bool purchasedFactory;
     private bool purchasedBoat;
-
+    
     //now handled in levelmanager
     //public TextMeshProUGUI scoreText;
     //public TextMeshProUGUI calendarYear;
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public int timePassing;
     public int ClickPower;
 
-    //shop - the texts are covered in levelmanager
+   //shop - the texts are covered in levelmanager
     public int item1Price; //This is the boat price.
     //public TextMeshProUGUI item1text;
     public int item2Price; //This is the factory price.
@@ -63,6 +63,10 @@ public class GameManager : MonoBehaviour
     // input for healthbar sprite;
     //unnecessary now
     //public GameObject healthBar;
+
+    //Random event
+    public bool nowIsEvent;
+    //public GameObject weather;
     
     void Awake() 
     {
@@ -170,15 +174,26 @@ public class GameManager : MonoBehaviour
 
 
         // temp inputs to test health system
-        // if (Input.GetKeyDown(KeyCode.Return))
-        // {
-        //     TakeDamage(-25);
-        // }
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            TakeDamage(-25);
+        }
 
-        // if (Input.GetKeyDown(KeyCode.Space))
-        // {
-        //     Heal(25);
-        // }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Heal(25);
+        }
+
+        //Random event
+        //if(nowIsEvent == false && time is not a specific year){
+            StartCoroutine(WaitForEvent());
+
+        //}
+
+        //if(nowIsEvent == true && time is a specific year){
+
+
+        //}
 
     }
 
@@ -283,7 +298,6 @@ public class GameManager : MonoBehaviour
     public void Cleansing(float recovery){
         riverBeauty += recovery;
     }
-
     // public IEnumerator PlayAndDelay() {
     //     factoryClip.Play();
     //     yield return new WaitForSeconds(3f);
@@ -293,5 +307,22 @@ public class GameManager : MonoBehaviour
     //     factoryClip.Play();
     //     print("Factory Clip");
     // }
+
+    public void HarmfulEvent(){
+        //TakeDamage();
+        //nowIsEvent = false;
+
+    }
+
+    IEnumerator WaitForEvent(){
+        yield return new WaitForSeconds(5f);
+        int x = 0;
+        x = Random.Range(1, 3);
+
+        
+    }
+
+    //public void
+    
 
 }
