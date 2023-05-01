@@ -1880,7 +1880,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 546e126184ae4624eb508b09d7b4bfda, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2371,7 +2371,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: ce766ec6516299f44a575aecc29cbfa1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2705,6 +2705,10 @@ MonoBehaviour:
   boatNumber: 0
   UpgradeCost: 0
   nowIsEvent: 0
+  hasEvent1: 0
+  hasEvent2: 0
+  hasEvent3: 0
+  hasEvent4: 0
 --- !u!4 &1949871111
 Transform:
   m_ObjectHideFlags: 0
