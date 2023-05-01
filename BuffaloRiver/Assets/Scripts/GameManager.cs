@@ -69,6 +69,11 @@ public class GameManager : MonoBehaviour
     //Random event
     public bool nowIsEvent;
     //public GameObject weather;
+
+    public bool hasEvent1;
+    public bool hasEvent2;
+    public bool hasEvent3;
+    public bool hasEvent4;
     
     void Awake() 
     {
@@ -104,6 +109,10 @@ public class GameManager : MonoBehaviour
         //touristBoat.SetActive(false);
         purchasedBoat = false;
         money = 0;
+        hasEvent1 = false;
+        hasEvent2 = false;
+        hasEvent3 = false;
+        hasEvent4 = false;
     }
 
     // Update is called once per frame
@@ -127,6 +136,10 @@ public class GameManager : MonoBehaviour
             item1Price = 5;
             item2Price = 10;
             money = 0;
+            hasEvent1 = false;
+            hasEvent2 = false;
+            hasEvent3 = false;
+            hasEvent4 = false;
         }
         else if ((actualTime > 2023))
         {
@@ -146,6 +159,30 @@ public class GameManager : MonoBehaviour
             item1Price = 5;
             item2Price = 10;
             money = 0;
+            hasEvent1 = false;
+            hasEvent2 = false;
+            hasEvent3 = false;
+            hasEvent4 = false;
+        }
+        else if ((actualTime == 1980) && (!hasEvent1)){
+            hasEvent1 = true;
+            pause();
+            SceneManager.LoadScene("flood_event");
+        }
+        else if ((actualTime == 1990) && (!hasEvent2)){
+            hasEvent2 = true;
+            pause();
+            SceneManager.LoadScene("put something here");
+        }
+        else if ((actualTime == 2000) && (!hasEvent3)){
+            hasEvent3 = true;
+            pause();
+            SceneManager.LoadScene("put something here");
+        }
+        else if ((actualTime == 2010) && (!hasEvent4)){
+            hasEvent4 = true;
+            pause();
+            SceneManager.LoadScene("put something here");
         }
 
 

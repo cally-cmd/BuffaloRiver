@@ -16,5 +16,13 @@ public class SceneLoader : MonoBehaviour
 
         
     }
+
+    public void levelPause(){
+        GameManager.Instance.pause();
+    }
+
+    public void levelUnpause(){
+        GameManager.Instance.unpause();
+    }
     
 }

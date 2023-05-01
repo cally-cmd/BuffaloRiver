@@ -23,4 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits (Menu).unity
     guid: d7eed5e742a41f54dba0b9c902f10658
+  - enabled: 1
+    path: Assets/Scenes/flood_event.unity
+    guid: 3f8ce1efdaa1b754b9a5ee5a2d0d103e
+  - enabled: 1
+    path: Assets/Scenes/Filler_Event.unity
+    guid: 489282371f2244c4caad7cd2fcfa80a0
+  - enabled: 1
+    path: Assets/Scenes/Ice_storm.unity
+    guid: 0daf848a5f4293a469d45c3d11ad9493
+  - enabled: 1
+    path: Assets/Scenes/Land_Purchase.unity
+    guid: 6ebea49db5d275f4292c24d84702f10d
   m_configObjects: {}
