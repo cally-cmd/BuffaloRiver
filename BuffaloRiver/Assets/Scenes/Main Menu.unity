@@ -2684,6 +2684,8 @@ MonoBehaviour:
   ecosystemHealth: 0
   riverBeauty: 0
   money: 0
+  purchasedFactory: 0
+  purchasedBoat: 0
   maxHealth: 0
   maxBeauty: 0
   paused: 1
@@ -2692,22 +2694,17 @@ MonoBehaviour:
   item1Price: 0
   item2Price: 0
   item3Price: 0
-  incomeUpgradeButton: {fileID: 0}
-  factoryUpgradeButton: {fileID: 0}
-  boatUpgradeButton: {fileID: 0}
-  factory: {fileID: 0}
-  factoryClip: {fileID: 0}
-  touristBoat: {fileID: 0}
-  dock: {fileID: 0}
-  healthMusic: []
+  healthMusic:
+  - {fileID: 8300000, guid: 0e43ec695dc22d84c8a5eedb738900d0, type: 3}
+  - {fileID: 8300000, guid: 5a83c6df148052148a00354f85e4695b, type: 3}
+  - {fileID: 8300000, guid: 0cd657607b3738048ab460b3b4614e05, type: 3}
+  - {fileID: 8300000, guid: 01723af3ba2d55e4b802975b5a3b6304, type: 3}
   riverEcon: 0
   moneyGains: 0
   factoryNumber: 0
   boatNumber: 0
   UpgradeCost: 0
-  UpgradeText: {fileID: 0}
-  factorySubscript: {fileID: 0}
-  boatSubscript: {fileID: 0}
+  nowIsEvent: 0
 --- !u!4 &1949871111
 Transform:
   m_ObjectHideFlags: 0

@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
         riverBeauty = 100;
         maxBeauty = 100;
         timePassing = 2000;
-        paused = false;
+        paused = true;
         ClickPower = 1;
         factoryNumber = 0;
         boatNumber = 0;
@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour
         //moved to levelManager
         //touristBoat.SetActive(false);
         purchasedBoat = false;
+        money = 0;
     }
 
     // Update is called once per frame
@@ -125,6 +126,7 @@ public class GameManager : MonoBehaviour
             UpgradeCost = 20;
             item1Price = 5;
             item2Price = 10;
+            moeny = 0;
         }
         else if ((actualTime > 2023))
         {
@@ -143,6 +145,7 @@ public class GameManager : MonoBehaviour
             UpgradeCost = 20;
             item1Price = 5;
             item2Price = 10;
+            money = 0;
         }
 
 
