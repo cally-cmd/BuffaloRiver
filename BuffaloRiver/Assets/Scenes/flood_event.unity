@@ -309,7 +309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Toggle
+  m_text: ' More Info'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f8326fc9f5a8b30f497b704fbf62fe40, type: 2}
   m_sharedMaterial: {fileID: 1333972938964238231, guid: f8326fc9f5a8b30f497b704fbf62fe40, type: 2}
@@ -694,8 +694,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6c93d5a3fe561acb3727d26bd1ad74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  introDialog: A great flood has happened! This is causing damage to the river and
-    less tourists to appear!
+  introDialog: A great flood has happened! This is causing damage to the land around
+    the river, raising construction costs for a time and causing fewer tourists to
+    appear!
   specificDialog: Rainfall varies between 30 to 80 inches and averages 46 inches
     annually in Harrison, AR. The greatest amounts of precipitation occur in winter
     and spring, usually around 4 to 5 inches per month. Average winter snowfall is

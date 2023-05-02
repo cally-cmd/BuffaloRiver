@@ -74,6 +74,8 @@ public class GameManager : MonoBehaviour
     public bool hasEvent2;
     public bool hasEvent3;
     public bool hasEvent4;
+
+    public int boatGains;
     
     void Awake() 
     {
@@ -113,6 +115,8 @@ public class GameManager : MonoBehaviour
         hasEvent2 = false;
         hasEvent3 = false;
         hasEvent4 = false;
+        moneyGains = 0;
+        boatGains = 0;
     }
 
     // Update is called once per frame
@@ -140,6 +144,8 @@ public class GameManager : MonoBehaviour
             hasEvent2 = false;
             hasEvent3 = false;
             hasEvent4 = false;
+            moneyGains = 0;
+            boatGains = 0;
         }
         else if ((actualTime > 2023))
         {
@@ -163,26 +169,8 @@ public class GameManager : MonoBehaviour
             hasEvent2 = false;
             hasEvent3 = false;
             hasEvent4 = false;
-        }
-        else if ((actualTime == 1980) && (!hasEvent1)){
-            hasEvent1 = true;
-            pause();
-            SceneManager.LoadScene("flood_event");
-        }
-        else if ((actualTime == 1990) && (!hasEvent2)){
-            hasEvent2 = true;
-            pause();
-            SceneManager.LoadScene("put something here");
-        }
-        else if ((actualTime == 2000) && (!hasEvent3)){
-            hasEvent3 = true;
-            pause();
-            SceneManager.LoadScene("put something here");
-        }
-        else if ((actualTime == 2010) && (!hasEvent4)){
-            hasEvent4 = true;
-            pause();
-            SceneManager.LoadScene("put something here");
+            moneyGains = 0;
+            boatGains = 0;
         }
 
 
@@ -219,15 +207,15 @@ public class GameManager : MonoBehaviour
 
 
         // temp inputs to test health system
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            TakeDamage(-25);
-        }
+        // if (Input.GetKeyDown(KeyCode.Return))
+        // {
+        //     TakeDamage(-25);
+        // }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Heal(25);
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     Heal(25);
+        // }
 
         //Random event
         //if(nowIsEvent == false && time is not a specific year){
@@ -246,7 +234,7 @@ public class GameManager : MonoBehaviour
     {
         if(money >= item1Price){
             money -= item1Price;
-            moneyGains += 5;
+            boatGains += 5;
             boatNumber++;
             item1Price *= 2;
             

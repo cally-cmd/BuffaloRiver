@@ -10,10 +10,11 @@ public class FloodDialog : MonoBehaviour {
 
   public TextMeshProUGUI dialogText;
 
-  private bool isIntroDialog;
+  public bool isIntroDialog;
 
   void Start() {
-    isIntroDialog = true;
+    isIntroDialog = false;
+    ToggleText();
   }
   
   public void ToggleText() {

@@ -42,6 +42,9 @@ public class levelManager : MonoBehaviour
     public GameObject touristBoat;
     public GameObject dock;
 
+    //for tourism
+    public float adjustedTourism;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,7 +70,7 @@ public class levelManager : MonoBehaviour
                     beautyAdjust(-2);
                     print("you have factories");
                 }
-            GameManager.Instance.money += GameManager.Instance.moneyGains;
+            GameManager.Instance.money += (GameManager.Instance.moneyGains + (int)adjustedTourism);
         }
         scoreText.text = "$" + GameManager.Instance.money.ToString();
         calendarYear.text = GameManager.Instance.actualTime.ToString();
@@ -96,6 +99,41 @@ public class levelManager : MonoBehaviour
             factoryUpgradeButton.SetActive(false);
         } else {
             factoryUpgradeButton.SetActive(true);
+        }
+
+        if ((GameManager.Instance.actualTime == 1980) && (!GameManager.Instance.hasEvent1)){
+            GameManager.Instance.hasEvent1 = true;
+            levelPause();
+            GameManager.Instance.item2Price *= 2;
+            beautyAdjust(-10);
+            SceneManager.LoadScene("flood_event");
+        }
+        else if ((GameManager.Instance.actualTime == 1990) && (!GameManager.Instance.hasEvent2)){
+            GameManager.Instance.hasEvent2 = true;
+            levelPause();
+            healthAdjust(-10);
+            beautyAdjust(-10);
+            GameManager.Instance.item2Price /= 2;
+            SceneManager.LoadScene("Algal_Event");
+        }
+        else if ((GameManager.Instance.actualTime == 2000) && (!GameManager.Instance.hasEvent3)){
+            GameManager.Instance.hasEvent3 = true;
+            levelPause();
+            healthAdjust(-10);
+            beautyAdjust(-10);
+            SceneManager.LoadScene("Ecoli_Event");
+        }
+        else if ((GameManager.Instance.actualTime == 2010) && (!GameManager.Instance.hasEvent4)){
+            GameManager.Instance.hasEvent4 = true;
+            levelPause();
+            if (GameManager.Instance.purchasedFactory){
+                GameManager.Instance.factoryNumber /= 2;
+                GameManager.Instance.moneyGains /= 2;
+            } else {
+                beautyAdjust(20);
+                GameManager.Instance.riverEcon /= 2;
+            }
+            SceneManager.LoadScene("Land_Purchase");
         }
 
     }
@@ -184,6 +222,7 @@ public class levelManager : MonoBehaviour
                 GameManager.Instance.Ruination(change);
             }
         }
+        adjustedTourism = GameManager.Instance.boatGains * (GameManager.Instance.riverBeauty / 100);
 
     }
 

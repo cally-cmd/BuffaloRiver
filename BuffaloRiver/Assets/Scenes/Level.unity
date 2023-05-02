@@ -398,7 +398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -534, y: -4}
+  m_AnchoredPosition: {x: -534, y: 63}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66858373
@@ -842,7 +842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -171, y: 58}
+  m_AnchoredPosition: {x: -99, y: 107}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &282786961
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Press Play to Play. \nPress Pause to Pause ->"
+  m_text: "Press Play to Play. \nPress Pause to Pause\n\t\t\t |\n\t\t\tV"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}
   m_sharedMaterial: {fileID: -7949474625173199831, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}
@@ -977,7 +977,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -255, y: -2}
+  m_AnchoredPosition: {x: -342, y: -2}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &456073613
@@ -1907,7 +1907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -440, y: 237}
+  m_AnchoredPosition: {x: -447, y: 241}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698400390
@@ -4043,6 +4043,7 @@ MonoBehaviour:
   factoryClip: {fileID: 1634607509}
   touristBoat: {fileID: 228477166}
   dock: {fileID: 231994381}
+  adjustedTourism: 0
 --- !u!4 &1004072399
 Transform:
   m_ObjectHideFlags: 0
@@ -4762,7 +4763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -466, y: 201}
+  m_AnchoredPosition: {x: -481, y: 201}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1272054346
@@ -5522,7 +5523,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -429, y: 163}
+  m_AnchoredPosition: {x: -443, y: 163}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558576120
@@ -6282,6 +6283,11 @@ MonoBehaviour:
   boatNumber: 0
   UpgradeCost: 20
   nowIsEvent: 0
+  hasEvent1: 0
+  hasEvent2: 0
+  hasEvent3: 0
+  hasEvent4: 0
+  boatGains: 0
 --- !u!4 &1750293948
 Transform:
   m_ObjectHideFlags: 0
