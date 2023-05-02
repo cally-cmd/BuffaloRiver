@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
         maxHealth = 100;
         riverBeauty = 100;
         maxBeauty = 100;
-        timePassing = 2000;
+        timePassing = 4000;
         paused = true;
         ClickPower = 1;
         factoryNumber = 0;
