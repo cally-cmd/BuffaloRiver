@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
     public bool hasEvent4;
 
     public int boatGains;
-    
+
     void Awake() 
     {
        if (Instance == null) 

@@ -236,21 +236,17 @@ public class levelManager : MonoBehaviour
     public void buyItem1(){
         GameManager.Instance.item1();
         print("boat buy check");
-        if (!GameManager.Instance.purchasedBoat) {
-                touristBoat.SetActive(true);
-                dock.SetActive(true);
-                GameManager.Instance.purchasedBoat = true;
-            }
-            boatSubscript.text = GameManager.Instance.boatNumber.ToString();
+        touristBoat.SetActive(true);
+        dock.SetActive(true);
+        GameManager.Instance.purchasedBoat = true;
+        boatSubscript.text = GameManager.Instance.boatNumber.ToString();
     }
 
     public void buyItem2(){
         GameManager.Instance.item2();
-        if (!GameManager.Instance.purchasedFactory) {
-                factory.SetActive(true);
-                GameManager.Instance.purchasedFactory = true;
-            }
-            factorySubscript.text = GameManager.Instance.factoryNumber.ToString();
+        factory.SetActive(true);
+        GameManager.Instance.purchasedFactory = true;
+        factorySubscript.text = GameManager.Instance.factoryNumber.ToString();
     }
 
     public void buyUpgrade(){
