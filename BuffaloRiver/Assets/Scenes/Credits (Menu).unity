@@ -161,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -134}
+  m_AnchoredPosition: {x: 0, y: -161}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &549672541
@@ -485,7 +485,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -1}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1059712380
@@ -643,10 +643,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Daniel Burnet: Aesthetics and Sound Design\nDalton Casey: Code Editing
-    and Idle Game Mechanics\nGarrett Grisso: Event Implementation and Bug Fixing\nGrace
-    Capooth: artwork\nMiguel Velazquez: \n\nAnd thank you to Gordon Watkins for being
-    his great assistance in the veracity of the game."
+  m_text: 'Daniel Burnet: Aesthetics and Sound Design
+
+    Dalton Casey: Code Editing
+    and Idle Game Mechanics
+
+    Garrett Grisso: Event Implementation and Bug Fixing
+
+    Grace
+    Capooth: artwork
+
+    Miguel Velazquez: Basic foundations and level design
+
+
+    And
+    thank you to Gordon Watkins for being his great assistance in the veracity of
+    the game.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}
   m_sharedMaterial: {fileID: -7949474625173199831, guid: 425d2d38dbca7774f8a0110a70b8d8e0, type: 2}
