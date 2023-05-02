@@ -15,6 +15,9 @@ public class levelManager : MonoBehaviour
 
     public GameObject helpButtonOpen;
     public GameObject helpButtonClose;
+
+    public GameObject fastButton;
+    public GameObject slowButton;
     
     public GameObject healthBar;
     public GameObject beautyBar;
@@ -162,10 +165,14 @@ public class levelManager : MonoBehaviour
 
     public void faster(){
         GameManager.Instance.timePassing /= 2;
+        fastButton.SetActive(false);
+        slowButton.SetActive(true);
     }
 
     public void slower(){
         GameManager.Instance.timePassing *= 2;
+        fastButton.SetActive(true);
+        slowButton.SetActive(false);
     }
 
     public void healthAdjust(float change){
